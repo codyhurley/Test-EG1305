@@ -11,6 +11,11 @@ public class StockTransaction {
 		double commissionAfter = (amountReceived * COMMISSION_RATE);
 		double resultAmount = ((amountReceived - commissionAfter) - (amountPaid - commissionPrior));
 		
+		/*Incorrect result. Number of stocks need to by multiplied by number of stocks. program is missing no of stocks variable
+		Also the calculation of the profit is not correct. Calculate profit by sold - bought then take of both commissions from the profit
+		He actually lost money so should be a negative result.
+		*/
+		
 		System.out.println("Joe purchased a stock of 1000 shares for $" + amountPaid);
 		System.out.print("He also paid his broker $" + formatter.format(commissionPrior));
 		System.out.println(" at this time.");
