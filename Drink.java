@@ -13,6 +13,9 @@ public class Drink {
 		System.out.print("Of that number, " + percentCitrus);
 		System.out.println("% prefer the citrus-flavored drinks.");
 		
+		//The program is supposed to print the number of people that drink energy and citrus drinks not the percentage.
+		//Calculate these values using the percentages
+		
 	}
 
 }
