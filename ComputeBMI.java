@@ -7,23 +7,25 @@ public class ComputeBMI {
 		String inputHeight;  // User's height in inches
 		int height = 0;
 		int weight = 0;
-		double BMI = 0;
+		double BMI;
+		double results;
 		
 		// Get the weight
 		inputWeight =
 		        JOptionPane.showInputDialog("Please enter your weight " + "in pounds. ");
+				
+				weight = Integer.parseInt(inputWeight);
 		
 		// Get the height
 		inputHeight =
 		        JOptionPane.showInputDialog("Please enter your height " + "in inches. ");
 		
-		//You have not parsed the information you received from the user to height and weight.
-		//At this point weight and height are still 0.
-		//Please check the example in your slides how to parse from String to int.
+				height = Integer.parseInt(inputHeight);
 		
 		// Calculate BMI
 		
 		BMI = (double) (weight * 0.45359237) / ((height * 0.0254) * (height * 0.0254));
+		
 		
 		// Display Results
 		
