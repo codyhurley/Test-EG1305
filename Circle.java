@@ -1,21 +1,36 @@
-import java.text.DecimalFormat;
+
 public class Circle {
 
-	public static void main(String[] args) {
+	private double PI = Math.PI;
+	private double radius;
+	
+	public Circle() {
 		
-		DecimalFormat formatter = new DecimalFormat("#0.00");
-		int r = 9;
-		int d = 2 * r;
-		float area = (float)(r * r * Math.PI);
-		float perimiter = (float) (2 * Math.PI * r);
-		
-		System.out.println("The circle's radius is " + r);
-		System.out.println("Its diameter is " + d);
-		System.out.println("The area is " + formatter.format(area));
-		System.out.println("The perimeter is " +formatter.format(perimiter));
-		
-		
-
 	}
+	
+	public Circle(double r) {
+		radius = r;
+	}
+	
+	public double getRadius() {
+		return radius;
+	}
+	
+	public void setRadius(int r) {
+		radius = r;
+	}
+	
 
+	public double getArea() {
+		return PI * radius * radius;
+	}
+	
+	public double getDiameter() {
+		return radius*2;
+	}
+	
+	public double getCircumference() {
+		return 2 * PI * radius;
+	}
+	
 }
