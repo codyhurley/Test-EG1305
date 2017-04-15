@@ -1,54 +1,52 @@
 import java.util.Scanner;
 public class Array {
-	
-	private static int [] array;
 
 	public static void main(String[] args) {
 		
 		System.out.println("This program will find the highest, lowest, average, and sum of the numbers you will enter.");
 		
-		getArray();
-		
-		showHighest();
-		
-		showLowest();
-		
-		showTotal();
-		
-		
-		
-		
-	}
-	
-	public static int[] getArray() {
-		
 		Scanner sc = new Scanner(System.in);
 		
 		int size;
-		int number;
 		
 		System.out.println("How many numbers do you want?");
 		size = sc.nextInt();
 		
-		array = new int [size];
+		int [] array = new int [size];
 		
-		System.out.println("Please enter a series of " + size + " numbers.");
+		getValues(array);
+		
+		System.out.println("The highest element is: " + showHighest(array));
+		
+		System.out.println("The lowest element is: " + showLowest(array));
+		
+		System.out.println("The total of the elements is: " + showTotal(array));
+		
+		System.out.println("The average of the elements is: " + showAverage(array));
+		
+		
+	}
+	
+	public static void getValues(int [] array) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Please enter a series of " + array.length + " numbers.");
 		
 		for (int counter = 0; counter < array.length; counter ++) {
 			
 			System.out.print("Enter number " + counter + ": ");
-			number = sc.nextInt();
+			
+			array[counter] = sc.nextInt();
 			System.out.println(" ");
 			
 			
 		}
 		
-		return array;
-		
-		
+
 	}
 	
-	public static int showHighest() {
+	public static int showHighest(int [] array) {
 		
 		int highest = array[0];
 		
@@ -63,13 +61,13 @@ public class Array {
 			
 		}
 		
-		System.out.println("The highest number is " + highest);
-		
 		return highest;
+		
+		
 		
 	}
 	
-	public static int showLowest() {
+	public static int showLowest(int [] array) {
 		
 		int lowest = array[0];
 		
@@ -83,12 +81,11 @@ public class Array {
 			
 		}
 		
-		System.out.println("The lowest number is " + lowest);
 		
 		return lowest;
 	}
 	
-	public static int showTotal() {
+	public static int showTotal(int [] array) {
 		
 		int total = 0;
 		
@@ -98,12 +95,10 @@ public class Array {
 			
 		}
 		
-		System.out.println("The total is " + total);
-		
 		return total;
 	}
 	
-	public static double showAverage() {
+	public static double showAverage(int [] array) {
 		
 		double total = 0;
 		double average;
